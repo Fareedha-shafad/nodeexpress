@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libraray Management App</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+</head>
+<body>
+
+<!-- anvigation baar starts here -->
+<div class="form">
+  
+  <nav class="navbar navbar-expand-sm navbar-fixed-top bg-navbar  ">
+    
+     <ul class="navbar-nav mr-auto navtagcustom">
+       <%for(i=0;i<nav.length;i++){%>
+        <li class="nav-item">
+        <a class="nav-link"  href="<%=nav[i].link%>" ><%=nav[i].name%></a>
+       </li>
+       <%}%>
+     
+      </ul>
+     </div>
+  </nav>
+  <!-- navigation bar ends here -->
+
+<!-- jumbotron class starts here -->
+<div class="jumbotron customjumbotron">
+    <h1 ><u>Library</u></h1>
+    <h4 style="color: antiquewhite; padding-left:100px ;">Create an Account......</h4>
+    <div class="container pt-3 rectangle"></div>
+  </div>
+  <!-- jumbotron class ends here -->
+ <!-- signup starts  here-->
+ <!-- <div class="container myc">
+ -->
+
+<div class="container bg-dark">
+<form name="signupform" onsubmit="return signupvalidation()">
+	<div class="row">
+       
+     <div class="col-sm-1"></div>
+       
+		<div class="col-sm-2"></div>		
+		<div class="col-sm-6 bg-light boxStyle">
+
+	<div class="form-group align-self-center">
+		<div class="width30 floatL "><label class="signuplabel">Firstname</label></div>
+    <div class="width70 floatR"><input id="boxno1" class="width100 form-control" name="firstname" type="text" value="" size="20" required></div>
+    <p class="error-message"></p>
+  
+    
+
+  <!-- <div class="form-group align-self-center"> -->
+		<div class="width30 floatL"><label  class="signuplabel">Lastname</label></div>
+		<div class="width70 floatR"><input  id="boxno2" class="width100 form-control" name="lastname" type="text" value="" size="20"required></div>
+    <p class="error-message "></p>
+ 
+ 	<!-- <div class="form-group align-self-center"> -->
+ 		<div class="width30 floatL"><label  class="signuplabel">Email</label></div>
+ 		<div class="width70 floatR"><input  id="boxno3" class="width100 form-control" name="email" type="email" value="" size="20" required></div>
+     <p class="error-message "></p>
+ 
+  
+    <!-- <div class="form-group align-self-center"> -->
+		  <div class="width30 floatL"><label  class="signuplabel">Age</label></div>
+		  <div class="width70 floatR"><input  id="boxno4" class="width100 form-control" name="age" type="text" value="" size="20" required></div>
+      <p class="error-message"></p>
+
+    <div class="form-group align-self-center">
+		<div class="width30 floatL"><label  class="signuplabel">Phone NO:</label></div>
+		<div class="width70 floatR"><input  id="boxno6" class="width100 form-control" maxlength="9"   name="Phone"  value="" size="20" required></div>
+    <!-- pattern=".{8,}" -->
+    <p class="error-message "></p>
+ 
+	<!-- <div class="form-group align-self-center"> -->
+		<div class="width30 floatL"><label  class="signuplabel">Address</label></div>
+		<div class="width70 floatR"><input  id="boxno7" class="width100 form-control" name="address" type="text" value="" size="20"  required ></div>
+   <br>
+
+ 	<!-- <div class="form-group align-self-center"> -->
+ 		<div class="width30 floatL"><label  class="signuplabel">Country</label></div>
+ 		<div class="width70 floatR"><input  id="boxno8" class="width100 form-control" name="country" type="text" value="" size="20"></div>
+     <p class="error-message "></p><br>
+
+ 	 	<!-- <div class="form-group align-self-center"> -->
+ 		<div class="width30 floatL"><label  class="signuplabel">Password</label></div>
+     <div class="width70 floatR"><input  id="boxno9" class="width100 form-control" name="password" pattern=".{8,}" size="20" type="password"required></div>
+     <p class="error-message "></p><br>
+     <p class="password-rules">Your password should contain at least 8 characters and 1 number.</p>
+   </div>
+
+ 
+ 	
+</div>
+  	
+  	<div class="sigbtn">
+	<input class="btn btn-success " type="submit"  value="Submit"  style="font-weight: bold" onclick="signupvalidation()" >
+ <br>
+
+ <input class="btn btn-danger" type="button" style="font-weight: bold" onclick="window.location.replace('signup.html')" value="Cancel" />	
+</div>
+  	
+     </form>      
+		</div>
+	
+	</div> 
+	</div> 
+</div>
+</div>
+</form>
+
+<!--signup ends here  -->
+ <!-- footer starts -->
+ <footer>
+    <div class="f socialconnection">
+      <h2>Follow Us</h2>
+      <button type="button" class="btn btn-info">Twitter</button>
+      <button type="button" class="btn btn-primary">Facebook</button>
+      <button type="button" class="btn btn-danger">Google+</button>
+    </div>
+   </footer>
+ <!-- footer ends -->
+
+
+ <script src="/public/js/bootstrap.min.js"></script>
+ <script src="/public/js/script.js"></script>
+</body>
+
+</html>

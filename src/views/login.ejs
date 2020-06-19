@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=title%></title></title>
+    <!-- <link rel="stylesheet" href="/public/css/style.css"> -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+
+</head>
+<body>
+
+<!-- anvigation baar starts here -->
+<div class="form">
+  
+  <nav class="navbar navbar-expand-sm navbar-fixed-top bg-navbar  ">
+    
+     <ul class="navbar-nav mr-auto navtagcustom">
+       <%for(i=0;i<nav.length;i++){%>
+        <li class="nav-item">
+        <a class="nav-link"  href="<%=nav[i].link%>" ><%=nav[i].name%></a>
+       </li>
+       <%}%>
+     
+      </ul>
+     </div>
+  </nav>
+  
+ 
+  <!-- navigation bar ends here -->
+
+
+
+  <!-- jumbotron class starts here -->
+  <div class="jumbotron customjumbotron">
+    <h1 ><u>Library</u></h1>
+    <div class="container pt-3 rectangle"></div>
+  </div>
+  <!-- jumbotron class ends here -->
+
+
+  <!-- login form starts  here-->
+  <div class="container myc login-container">
+    <div class="row">
+        <div class="col-md-6 login-form-1">
+          <h4 style="color:midnightblue"><u>LOGIN FORM</u></h4>
+            <form name="loginform" onsubmit="return validationlogin()">
+                  <div class="form-group align-self-center  ">
+                    <input type="text"  class="form-control" id="email"  placeholder="Your Email" required >
+                   <p class="error  bg-danger"></p>
+                 </div>
+                <!-- <div class="form-group d-flex justify-content-center"> -->
+                  <div class="form-group align-self-center ">
+                    <input type="password" class="form-control" id="password" placeholder="Your Password" required >
+                    <p class="error bg-danger"></p> 
+                 </div>
+               
+                <br>
+                <div class="form-group">
+                    
+                    <input type="submit" class="btn btn-primary" value="Log In" onsubmit="validationlogin()">
+                    <input class="btn btn-danger" type="button" onclick="window.location.replace('login.html')" value="Cancel" />
+                    <!-- <input type="button" class="btn btn-danger" value="Cancel" href="login.html" > -->
+                </div>
+                <div class="form-group">
+                  <a href="./signup.ejs" style="color:brown" >Not Have an Account.</a>
+               </div>
+              
+            </form>
+        </div>
+      </div>
+     </div>
+ 
+<!--login form ends here  -->
+
+   <!-- footer starts -->
+   <footer>
+    <div class="f socialconnection">
+      <h2>Follow Us</h2>
+      <button type="button" class="btn btn-info">Twitter</button>
+      <button type="button" class="btn btn-primary">Facebook</button>
+      <button type="button" class="btn btn-danger">Google+</button>
+    </div>
+   </footer>
+ <!-- footer ends -->
+
+ <script src="/public/js/bootstrap.min.js"></script>
+ <script src="/public/js/script.js"></script>
+</body>
+
+</html>
