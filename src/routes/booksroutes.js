@@ -1,6 +1,7 @@
 const express = require('express');
 
-const booksrouter=express.Router();
+const booksRouter=express.Router();
+function router(nav){
 var books=[
     {
         title:'AADUJEEVITHAM',
@@ -21,24 +22,18 @@ var books=[
         img:"../images/kamalasurayya.jpg"
     }
 
-];
+]
 
-booksrouter.get('/',function(req,res){
+booksRouter.get('/',function(req,res){
     res.render('books',
-    {
+    {   nav,
         title:'Libraray Management App',
-        nav:[   {link:'/',name:'HOME'},
-                {link:'/login/',name:'LOGIN'},
-                {link:'/signup/',name:'SIGNUP'},
-                {link:'/books/',name:'BOOKS'},
-                {link:'/author/',name:'AUTHOR'}
-       
-            ],
+     
         books
     });
-})
+});
 
-booksrouter.get('/:id',function(req,res){
+booksRouter.get('/:id',function(req,res){
     const id= req.params.id
      res.render('book',{
          title:'Libraray Management App',
@@ -53,19 +48,6 @@ booksrouter.get('/:id',function(req,res){
  
      })
  })
-// booksrouter.route('/:id').get((req,res) => {
-//     const i=req.params.id;
-//     res.render('book.ejs',
-//     {
-//         title:'Libraray Management App',
-//          nav:[   {link:'./',name:'HOME'},
-//                  {link:'./login/',name:'LOGIN'},
-//                  {link:'./signup/',name:'SIGNUP'},
-//                  {link:'./books/',name:'BOOKS'},
-//                  {link:'./author/',name:'AUTHOR'}
- 
-//              ],
-//              book:books[i]
-//     });
-// });
- module.exports=booksrouter;
+ return booksRouter;
+}
+module.exports = router;
