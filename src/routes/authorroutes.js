@@ -6,19 +6,19 @@ function router(nav){
 
     var authors = [
         {
-              //  title:'AADUJEEVITHAM',
+                title:'AADUJEEVITHAM',
                 author:'Benyamin',
               //  catogory:'novel',
-                img:"../images/aadujeevitham.jpg"
+                img:"../images/OIP (3).jpg"
             },
             {
-              //  title:'PATHUMMAYUDE AADU',
+               title:'PATHUMMAYUDE AADU',
                 author:'Basheer',
                // catogory:'Novel',
                 img:"../images/basheer.jpg"
             },
             {
-               // title:'THE RAIN',
+                title:'THE RAIN',
                 author:'KamalaSurayya',
                // catogory:'Poem',
                 img:"../images/kamalasurayya.jpg"
@@ -30,7 +30,7 @@ function router(nav){
     
     authorsRouter.get('/',function(req,res){
     
-        res.render("authors",
+        res.render('authors',
             {
                 nav,
                 title:'Libraray Management App',
@@ -44,14 +44,18 @@ function router(nav){
         // });
     authorsRouter.get('/:id',function(req,res){
         const id=req.params.id
-        res.render('authors',{
-            nav,
-                title:'Library',
-                author:authors[id]
-      
+        res.render('author',{
+            title:'Libraray Management App',
+            nav:[   {link:'./',name:'HOME'},
+                    {link:'./login/',name:'LOGIN'},
+                    {link:'./signup/',name:'SIGNUP'},
+                    {link:'./books/',name:'BOOKS'},
+                    {link:'./authors',name:'AUTHOR'}
     
-        });
-    });
+                ],
+                author:authors[id]
+        })
+    })
     return authorsRouter;
 }
 

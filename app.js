@@ -38,7 +38,7 @@ app.set('views','./src/views');
 app.use('/login',loginRouter);
 app.use('/signup',signupRouter);
 app.use('/books',booksRouter);
-app.use('/author',authorsRouter);
+app.use('/authors',authorsRouter);
 //app.use('/book',brouter);
 
 

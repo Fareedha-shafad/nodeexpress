@@ -34,30 +34,28 @@
   <!-- navigation bar ends here -->
    
     <div class="jumbotron customjumbotron">
-      <h1 >AUTHORS MENU
-      </h1>
+      <h1 >Author</h1>
       <div class="container pt-3 rectangle"></div>
     </div>
     <!-- jumbotron class ends here -->
     <!-- container class starts  here-->
 
     <div class="container myc">
-        <%for(i=0;i<authors.length;i++){%>
+       
         <div class="media ">
-          <img src="../images/<%=authors[i].img%>" alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:80px;">
+          <img src="../images/<%=author.img%>" alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:100px;">
               <div class="media-body textalign">
+                 <h4><%=author.author%></h4>
+                 <kbd><%=author.title%></kbd><br>
                 
-                 <h4><%=authors[i].author%> </h4><br>
-                 <small><a href="/authors/<%=i%>">Read more</a>  </small> 
-                 
                </div>
         </div>
         <hr>
-        <%}%>
+        
       
        
 
-        <button type="button" class="btn btn-info" style="float: right;">More</button>
+       
     </div>
      <!-- container class ends  here-->
      <!-- footer starts -->

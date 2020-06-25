@@ -41,7 +41,7 @@ booksRouter.get('/:id',function(req,res){
                  {link:'./login/',name:'LOGIN'},
                  {link:'./signup/',name:'SIGNUP'},
                  {link:'./books/',name:'BOOKS'},
-                 {link:'./author/',name:'AUTHOR'}
+                 {link:'./authors/',name:'AUTHOR'}
  
              ],
              book:books[id]
