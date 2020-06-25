@@ -26,7 +26,8 @@ var books=[
 
 booksRouter.get('/',function(req,res){
     res.render('books',
-    {   nav,
+    {  
+         nav,
         title:'Libraray Management App',
      
         books
@@ -35,7 +36,7 @@ booksRouter.get('/',function(req,res){
 
 booksRouter.get('/:id',function(req,res){
     const id= req.params.id
-     res.render('book',{
+     res.render('books',{
          title:'Libraray Management App',
          nav:[   {link:'./',name:'HOME'},
                  {link:'./login/',name:'LOGIN'},

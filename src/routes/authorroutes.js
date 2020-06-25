@@ -50,7 +50,7 @@ function router(nav){
                     {link:'./login/',name:'LOGIN'},
                     {link:'./signup/',name:'SIGNUP'},
                     {link:'./books/',name:'BOOKS'},
-                    {link:'./authors',name:'AUTHOR'}
+                    {link:'./authors/',name:'AUTHOR'}
     
                 ],
                 author:authors[id]
