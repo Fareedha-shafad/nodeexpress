@@ -46,14 +46,8 @@ function router(nav){
         const id=req.params.id
         res.render('author',{
             title:'Libraray Management App',
-            nav:[   {link:'./',name:'HOME'},
-                    {link:'./login/',name:'LOGIN'},
-                    {link:'./signup/',name:'SIGNUP'},
-                    {link:'./books/',name:'BOOKS'},
-                    {link:'./authors/',name:'AUTHOR'}
-    
-                ],
-                author:authors[id]
+            nav,
+            author:authors[id]
         })
     })
     return authorsRouter;
