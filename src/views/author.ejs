@@ -46,10 +46,14 @@
           <img src="../images/<%=author.img%>" alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:100px;">
               <div class="media-body textalign">
                  <h4><%=author.author%></h4>
-                 <h6 style="color: blue;"><%=author.title%> <p>is a MasterPiece Work</p> </h6><br>
+                 <h5 style="color: blue;"><%=author.title%></h5><h6 > <p>is a MasterPiece Work</p> </h6><br>
                 
                </div>
         </div>
+
+        <button type="button" class="btn btn-danger" style="float: right;"><a href="/admin/deleteauthor/<%=author._id%>">Delete</a></button>
+        <button type="button" class="btn btn-info" style="float:right;">Update</button>
+          <hr>
         <hr>
         
       

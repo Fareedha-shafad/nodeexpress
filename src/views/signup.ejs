@@ -42,7 +42,8 @@
  -->
 
 <div class="container bg-dark">
-<form name="signupform" onsubmit="return signupvalidation()">
+
+<form action='/signup'  method='POST' onsubmit="return signupvalidation()">
 	<div class="row">
        
      <div class="col-sm-1"></div>
@@ -52,57 +53,64 @@
 
 	<div class="form-group align-self-center">
 		<div class="width30 floatL "><label class="signuplabel">Firstname</label></div>
-    <div class="width70 floatR"><input id="boxno1" class="width100 form-control" name="firstname" type="text" value="" size="20" required></div>
+    <div class="width70 floatR"><input id="boxno1" class="width100 form-control" name="fname" type="text" value="" size="20" required></div>
     <p class="error-message"></p>
   
-    
+    <br><br>
 
   <!-- <div class="form-group align-self-center"> -->
 		<div class="width30 floatL"><label  class="signuplabel">Lastname</label></div>
-		<div class="width70 floatR"><input  id="boxno2" class="width100 form-control" name="lastname" type="text" value="" size="20"required></div>
+		<div class="width70 floatR"><input  id="boxno2" class="width100 form-control" name="lname" type="text" value="" size="20"required></div>
     <p class="error-message "></p>
- 
+    <br><br>
  	<!-- <div class="form-group align-self-center"> -->
  		<div class="width30 floatL"><label  class="signuplabel">Email</label></div>
  		<div class="width70 floatR"><input  id="boxno3" class="width100 form-control" name="email" type="email" value="" size="20" required></div>
      <p class="error-message "></p>
- 
+     <br><br>
   
     <!-- <div class="form-group align-self-center"> -->
 		  <div class="width30 floatL"><label  class="signuplabel">Age</label></div>
 		  <div class="width70 floatR"><input  id="boxno4" class="width100 form-control" name="age" type="text" value="" size="20" required></div>
       <p class="error-message"></p>
-
+      <br><br>
     <div class="form-group align-self-center">
 		<div class="width30 floatL"><label  class="signuplabel">Phone NO:</label></div>
-		<div class="width70 floatR"><input  id="boxno6" class="width100 form-control" maxlength="9"   name="Phone"  value="" size="20" required></div>
+		<div class="width70 floatR"><input  id="boxno6" class="width100 form-control" maxlength="9"   name="phone"  value="" size="20" required></div>
     <!-- pattern=".{8,}" -->
     <p class="error-message "></p>
- 
+    <br><br>
 	<!-- <div class="form-group align-self-center"> -->
 		<div class="width30 floatL"><label  class="signuplabel">Address</label></div>
-		<div class="width70 floatR"><input  id="boxno7" class="width100 form-control" name="address" type="text" value="" size="20"  required ></div>
-   <br>
+		<div class="width70 floatR"><input  id="boxno7" class="width100 form-control" name="adress" type="text" value="" size="20"  required ></div>
+    <br><br>
 
  	<!-- <div class="form-group align-self-center"> -->
  		<div class="width30 floatL"><label  class="signuplabel">Country</label></div>
  		<div class="width70 floatR"><input  id="boxno8" class="width100 form-control" name="country" type="text" value="" size="20"></div>
-     <p class="error-message "></p><br>
-
+     <p class="error-message "></p><br><br>
  	 	<!-- <div class="form-group align-self-center"> -->
  		<div class="width30 floatL"><label  class="signuplabel">Password</label></div>
      <div class="width70 floatR"><input  id="boxno9" class="width100 form-control" name="password" pattern=".{8,}" size="20" type="password"required></div>
-     <p class="error-message "></p><br>
+     <p class="error-message "></p><br><br>
      <p class="password-rules">Your password should contain at least 8 characters and 1 number.</p>
    </div>
 
  
  	
 </div>
-  	
+    
+
+<!-- <div class="left-box">
+  <h1 class="left-head">Welcome Back !</h1>
+  <p class="left-para">To keep connected with us please sign in with your personal info</p>
+  <a href="/" target="_blank"><button type="button" class="btn btn-sign" id="right-sign"> Sign In</button></a> -->
+
+
   	<div class="sigbtn">
-	<input class="btn btn-success " type="submit"  value="Submit"  style="font-weight: bold" onclick="signupvalidation()" >
- <br>
+      <a href="/" target="_blank"><input class="btn btn-success " type="button"  value="Submit"  style="font-weight: bold" onclick="signupvalidation()" >
+        </a>    
+<br>
 
  <input class="btn btn-danger" type="button" style="font-weight: bold" onclick="window.location.replace('/signup')" value="Cancel" />	
 </div>
@@ -130,7 +138,7 @@
 
 
  <script src="/js/bootstrap.min.js"></script>
- <script src="/js/script.js"></script>
+ <script src="../public/js/script"></script>
 </body>
 
 </html>
